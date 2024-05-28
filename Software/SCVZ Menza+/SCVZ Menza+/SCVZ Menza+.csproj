@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Narudzba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzba.Designer.cs">
+      <DependentUpon>Narudzba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pretrazivanje i pregled.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Narudzba.resx">
+      <DependentUpon>Narudzba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pretrazivanje i pregled.resx">
       <DependentUpon>Pretrazivanje i pregled.cs</DependentUpon>
     </EmbeddedResource>
