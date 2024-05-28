@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Azuriranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriranje.Designer.cs">
+      <DependentUpon>Azuriranje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Narudzba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Azuriranje.resx">
+      <DependentUpon>Azuriranje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Narudzba.resx">
       <DependentUpon>Narudzba.cs</DependentUpon>
     </EmbeddedResource>
