@@ -67,6 +67,7 @@
     <Compile Include="FrmPretrazivanjeNarudzbi.Designer.cs">
       <DependentUpon>FrmPretrazivanjeNarudzbi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Obrok.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAzuriranje.resx">

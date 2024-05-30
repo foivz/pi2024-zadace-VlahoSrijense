@@ -40,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtUkupnaCijena = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -64,48 +66,48 @@
             // 
             // txtVrijemeNarudzbe
             // 
-            this.txtVrijemeNarudzbe.Location = new System.Drawing.Point(354, 244);
+            this.txtVrijemeNarudzbe.Location = new System.Drawing.Point(355, 287);
             this.txtVrijemeNarudzbe.Name = "txtVrijemeNarudzbe";
-            this.txtVrijemeNarudzbe.Size = new System.Drawing.Size(173, 22);
+            this.txtVrijemeNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtVrijemeNarudzbe.TabIndex = 45;
             this.txtVrijemeNarudzbe.TextChanged += new System.EventHandler(this.txtVrijemeNarudzbe_TextChanged);
             // 
             // txtStatusNarudzbe
             // 
-            this.txtStatusNarudzbe.Location = new System.Drawing.Point(353, 197);
+            this.txtStatusNarudzbe.Location = new System.Drawing.Point(355, 240);
             this.txtStatusNarudzbe.Name = "txtStatusNarudzbe";
-            this.txtStatusNarudzbe.Size = new System.Drawing.Size(174, 22);
+            this.txtStatusNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtStatusNarudzbe.TabIndex = 44;
             this.txtStatusNarudzbe.TextChanged += new System.EventHandler(this.txtStatusNarudzbe_TextChanged);
             // 
             // txtKolicina
             // 
-            this.txtKolicina.Location = new System.Drawing.Point(353, 151);
+            this.txtKolicina.Location = new System.Drawing.Point(355, 151);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(174, 22);
+            this.txtKolicina.Size = new System.Drawing.Size(171, 22);
             this.txtKolicina.TabIndex = 43;
             this.txtKolicina.TextChanged += new System.EventHandler(this.txtKolicina_TextChanged);
             // 
             // txtObrok
             // 
-            this.txtObrok.Location = new System.Drawing.Point(353, 105);
+            this.txtObrok.Location = new System.Drawing.Point(355, 105);
             this.txtObrok.Name = "txtObrok";
-            this.txtObrok.Size = new System.Drawing.Size(174, 22);
+            this.txtObrok.Size = new System.Drawing.Size(171, 22);
             this.txtObrok.TabIndex = 42;
             this.txtObrok.TextChanged += new System.EventHandler(this.txtObrok_TextChanged);
             // 
             // txtBrojNarudžbe
             // 
-            this.txtBrojNarudžbe.Location = new System.Drawing.Point(353, 60);
+            this.txtBrojNarudžbe.Location = new System.Drawing.Point(355, 60);
             this.txtBrojNarudžbe.Name = "txtBrojNarudžbe";
-            this.txtBrojNarudžbe.Size = new System.Drawing.Size(174, 22);
+            this.txtBrojNarudžbe.Size = new System.Drawing.Size(171, 22);
             this.txtBrojNarudžbe.TabIndex = 41;
             this.txtBrojNarudžbe.TextChanged += new System.EventHandler(this.txtBrojNarudžbe_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(238, 247);
+            this.label5.Location = new System.Drawing.Point(238, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 16);
             this.label5.TabIndex = 40;
@@ -115,7 +117,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 199);
+            this.label4.Location = new System.Drawing.Point(244, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 39;
@@ -152,11 +154,31 @@
             this.label1.Text = "Broj narudžbe:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(251, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 16);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Ukupna cijena:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtUkupnaCijena
+            // 
+            this.txtUkupnaCijena.Location = new System.Drawing.Point(355, 199);
+            this.txtUkupnaCijena.Name = "txtUkupnaCijena";
+            this.txtUkupnaCijena.Size = new System.Drawing.Size(171, 22);
+            this.txtUkupnaCijena.TabIndex = 49;
+            this.txtUkupnaCijena.TextChanged += new System.EventHandler(this.txtUkupnaCijena_TextChanged);
+            // 
             // FrmNarudzba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtUkupnaCijena);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.txtVrijemeNarudzbe);
@@ -190,5 +212,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtUkupnaCijena;
     }
 }

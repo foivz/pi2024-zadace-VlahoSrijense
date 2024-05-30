@@ -76,5 +76,15 @@ namespace SCVZ_Menza_
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUkupnaCijena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
