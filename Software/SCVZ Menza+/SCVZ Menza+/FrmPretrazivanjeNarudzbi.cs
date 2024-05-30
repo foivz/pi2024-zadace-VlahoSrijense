@@ -30,6 +30,16 @@ namespace SCVZ_Menza_
             dgvPregledNarudzbi.AutoGenerateColumns = true;  
         }
 
+        private void ShowTrazeneNarudzbe()
+        {
+            List<Narudzba> narudzba = NarudzbaRepository.SearchNarudzba(txtPretrazivanje.Text);
+            dgvPregledNarudzbi.DataSource = narudzba;
+
+            dgvPregledNarudzbi.AutoGenerateColumns = true;
+
+        }
+
+
         private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
         {
 
@@ -37,7 +47,12 @@ namespace SCVZ_Menza_
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-           
+            string pretrazivanje = txtPretrazivanje.Text;
+            if (pretrazivanje != null)
+            {
+                ShowTrazeneNarudzbe();
+            }
+
         }
 
         private void dgvPregledNarudzbi_CellContentClick(object sender, DataGridViewCellEventArgs e)
