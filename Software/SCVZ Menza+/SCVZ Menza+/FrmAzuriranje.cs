@@ -76,5 +76,10 @@ namespace SCVZ_Menza_
         {
 
         }
+
+        private void FrmAzuriranje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

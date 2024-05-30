@@ -24,20 +24,20 @@ namespace SCVZ_Menza_
        
         private void ShowNarudzbe()
         {
-            var students = NarudzbaRepository.GetNarudzba();
-            dgvPregledNarudzbi.DataSource = students;
+            var narudzba = NarudzbaRepository.GetNarudzba();
+            dgvPregledNarudzbi.DataSource = narudzba;
 
             dgvPregledNarudzbi.AutoGenerateColumns = true;  
         }
 
-    private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
+        private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void dgvPregledNarudzbi_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,14 +48,32 @@ namespace SCVZ_Menza_
         private void btnNarucivanje_Click(object sender, EventArgs e)
         {
 
+            FrmNarudzba frmNarudzba = new FrmNarudzba();
+            Hide();
+            frmNarudzba.ShowDialog();
+            Close();
+
+     
         }
 
         private void btnAzuriranje_Click(object sender, EventArgs e)
         {
-
+            Narudzba selectedNarudzba = dgvPregledNarudzbi.CurrentRow.DataBoundItem as Narudzba;
+            if (selectedNarudzba != null)
+            {
+                FrmAzuriranje frmAzuriranje = new FrmAzuriranje();
+                Hide();
+                frmAzuriranje.ShowDialog();
+                Close();
+            }
         }
 
         private void btnBrisanje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmPretrazivanjeNarudzbi_Load(object sender, EventArgs e)
         {
 
         }

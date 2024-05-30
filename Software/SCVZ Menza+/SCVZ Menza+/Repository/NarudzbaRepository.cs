@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SCVZ_Menza_.Repository
 {
-    internal class NarudzbaRepository
+    public class NarudzbaRepository
     {
         public static List<Narudzba> GetNarudzba()
         {
@@ -35,7 +35,7 @@ namespace SCVZ_Menza_.Repository
         {
             var narudzbe = new List<Narudzba>();
 
-            string sql = $"SELECT * FROM Smjestaji WHERE IdObrok LIKE '%{pretrazivanje}%'";
+            string sql = $"SELECT * FROM dbo.Narudzba WHERE IdObrok LIKE '%{pretrazivanje}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
