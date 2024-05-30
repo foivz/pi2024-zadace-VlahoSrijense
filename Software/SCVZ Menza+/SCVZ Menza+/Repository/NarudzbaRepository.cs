@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SCVZ_Menza_.Repository
 {
@@ -15,7 +16,7 @@ namespace SCVZ_Menza_.Repository
         {
             var narudzbe = new List<Narudzba>();
 
-            string sql = "SELECT * FROM Narudzba";
+            string sql = "SELECT * FROM dbo.Narudzba";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -26,7 +27,7 @@ namespace SCVZ_Menza_.Repository
             reader.Close();
 
             DB.CloseConnection();
-
+      
             return narudzbe;
         }
 
@@ -52,11 +53,11 @@ namespace SCVZ_Menza_.Repository
         private static Narudzba CreateObject(SqlDataReader reader)
         {
             int idNarudzbe = int.Parse(reader["IdNarudzbe"].ToString());
-            int idObroka = int.Parse(reader["IdObroka"].ToString());
+            int idObroka = int.Parse(reader["IdObrok"].ToString());
             int kolicina = int.Parse(reader["Kolicina"].ToString());
             float cijena = float.Parse(reader["UkupnaCijena"].ToString());
             string statusNarudzbe = reader["StatusNarudzbe"].ToString();
-            string vrijemeNarudzbe = reader["VrijemeNarudzbe"].ToString();
+           
 
             var narudzba = new Narudzba
             {
@@ -65,7 +66,7 @@ namespace SCVZ_Menza_.Repository
                 Kolicina = kolicina,
                 UkupnaCijena = cijena,
                 StatusNarudzbe = statusNarudzbe,
-                VrijemeNarudzbe = vrijemeNarudzbe,
+               
             };
             return narudzba;
         }

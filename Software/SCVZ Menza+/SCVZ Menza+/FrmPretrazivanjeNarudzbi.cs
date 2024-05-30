@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SCVZ_Menza_.Models;
+using SCVZ_Menza_.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBLayer;
+
 
 namespace SCVZ_Menza_
 {
@@ -15,9 +19,18 @@ namespace SCVZ_Menza_
         public FrmPretrazivanjeNarudzbi()
         {
             InitializeComponent();
+            ShowNarudzbe();
+        }
+       
+        private void ShowNarudzbe()
+        {
+            var students = NarudzbaRepository.GetNarudzba();
+            dgvPregledNarudzbi.DataSource = students;
+
+            dgvPregledNarudzbi.AutoGenerateColumns = true;  
         }
 
-        private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
+    private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
         {
 
         }

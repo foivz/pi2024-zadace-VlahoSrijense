@@ -40,9 +40,9 @@
             // 
             // btnPretrazi
             // 
-            this.btnPretrazi.Location = new System.Drawing.Point(605, 29);
+            this.btnPretrazi.Location = new System.Drawing.Point(598, 24);
             this.btnPretrazi.Name = "btnPretrazi";
-            this.btnPretrazi.Size = new System.Drawing.Size(98, 21);
+            this.btnPretrazi.Size = new System.Drawing.Size(99, 31);
             this.btnPretrazi.TabIndex = 20;
             this.btnPretrazi.Text = "Pretraži";
             this.btnPretrazi.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             // 
             this.txtPretrazivanje.Location = new System.Drawing.Point(332, 29);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
-            this.txtPretrazivanje.Size = new System.Drawing.Size(252, 22);
+            this.txtPretrazivanje.Size = new System.Drawing.Size(248, 22);
             this.txtPretrazivanje.TabIndex = 19;
             this.txtPretrazivanje.TextChanged += new System.EventHandler(this.txtPretrazivanje_TextChanged);
             // 

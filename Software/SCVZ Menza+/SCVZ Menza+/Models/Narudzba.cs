@@ -13,7 +13,7 @@ namespace SCVZ_Menza_.Models
         public int Kolicina { get;set; }
         public float UkupnaCijena {  get; set; }
         public string StatusNarudzbe { get; set; }
-        public string VrijemeNarudzbe { get; set; }
+       
 
     }
 }
