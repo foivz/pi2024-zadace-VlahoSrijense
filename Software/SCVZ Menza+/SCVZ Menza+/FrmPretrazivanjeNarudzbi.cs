@@ -70,6 +70,16 @@ namespace SCVZ_Menza_
 
         private void btnBrisanje_Click(object sender, EventArgs e)
         {
+            Narudzba selectedNarudzba = dgvPregledNarudzbi.CurrentRow.DataBoundItem as Narudzba;
+            if (selectedNarudzba != null)
+            {
+                int idNarudzbe = selectedNarudzba.IdNarudzbe;
+                string sql = $"DELETE FROM dbo.Narudzba WHERE IdNarudzbe={idNarudzbe}";
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
+                ShowNarudzbe();
+            }
 
         }
 
