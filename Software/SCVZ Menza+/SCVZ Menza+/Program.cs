@@ -16,7 +16,7 @@ namespace SCVZ_Menza_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmPretrazivanjeNarudzbi());
         }
     }
 }
