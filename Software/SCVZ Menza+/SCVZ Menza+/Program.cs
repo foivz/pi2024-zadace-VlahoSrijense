@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace SCVZ_Menza_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPretrazivanjeNarudzbi());
+            DB.SetConfiguration("PI2324_vsrijense22_DB", "PI2324_vsrijense22_User", "S0gUZG-2");
         }
     }
 }
