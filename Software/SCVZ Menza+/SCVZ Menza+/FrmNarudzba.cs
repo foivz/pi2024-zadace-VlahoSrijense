@@ -1,7 +1,10 @@
-﻿using System;
+﻿using DBLayer;
+using SCVZ_Menza_.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +18,10 @@ namespace SCVZ_Menza_
         public FrmNarudzba()
         {
             InitializeComponent();
+            LoadObroci();
+        }
+        private void FrmNarudzba_Load(object sender, EventArgs e)
+        {
         }
 
         private void txtStatusNarudzbe_TextChanged(object sender, EventArgs e)
@@ -84,7 +91,25 @@ namespace SCVZ_Menza_
 
         private void cboObrok_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
 
+        private void LoadObroci()
+        {
+                DB.OpenConnection();
+                string sql = "SELECT IdObroka, NazivObroka FROM dbo.Obrok";
+                SqlDataReader reader = DB.GetDataReader(sql);
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                cboObrok.DisplayMember = "NazivObroka";
+                cboObrok.ValueMember = "IdObroka";
+                cboObrok.DataSource = dt;
+
+                reader.Close();
+  
+                DB.CloseConnection();
         }
     }
 }
+

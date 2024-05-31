@@ -79,6 +79,7 @@
             this.txtUkupnaCijena.Name = "txtUkupnaCijena";
             this.txtUkupnaCijena.Size = new System.Drawing.Size(171, 22);
             this.txtUkupnaCijena.TabIndex = 61;
+            this.txtUkupnaCijena.TextChanged += new System.EventHandler(this.txtUkupnaCijena_TextChanged);
             // 
             // label6
             // 
@@ -88,6 +89,7 @@
             this.label6.Size = new System.Drawing.Size(96, 16);
             this.label6.TabIndex = 60;
             this.label6.Text = "Ukupna cijena:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtVrijemeNarudzbe
             // 
@@ -95,6 +97,7 @@
             this.txtVrijemeNarudzbe.Name = "txtVrijemeNarudzbe";
             this.txtVrijemeNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtVrijemeNarudzbe.TabIndex = 59;
+            this.txtVrijemeNarudzbe.TextChanged += new System.EventHandler(this.txtVrijemeNarudzbe_TextChanged);
             // 
             // txtStatusNarudzbe
             // 
@@ -102,6 +105,7 @@
             this.txtStatusNarudzbe.Name = "txtStatusNarudzbe";
             this.txtStatusNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtStatusNarudzbe.TabIndex = 58;
+            this.txtStatusNarudzbe.TextChanged += new System.EventHandler(this.txtStatusNarudzbe_TextChanged);
             // 
             // txtKolicina
             // 
@@ -117,6 +121,7 @@
             this.txtBrojNarudžbe.Name = "txtBrojNarudžbe";
             this.txtBrojNarudžbe.Size = new System.Drawing.Size(171, 22);
             this.txtBrojNarudžbe.TabIndex = 56;
+            this.txtBrojNarudžbe.TextChanged += new System.EventHandler(this.txtBrojNarudžbe_TextChanged);
             // 
             // label5
             // 
@@ -126,6 +131,7 @@
             this.label5.Size = new System.Drawing.Size(115, 16);
             this.label5.TabIndex = 55;
             this.label5.Text = "Vrijeme narudžbe:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -135,6 +141,7 @@
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 54;
             this.label4.Text = "Status narudžbe:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -144,6 +151,7 @@
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 53;
             this.label3.Text = "Količina:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -153,6 +161,7 @@
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 52;
             this.label2.Text = "Obrok:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -162,6 +171,7 @@
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 51;
             this.label1.Text = "Broj narudžbe:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmAzuriranje
             // 
