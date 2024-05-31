@@ -66,6 +66,7 @@
             // 
             // cboObrok
             // 
+            this.cboObrok.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboObrok.FormattingEnabled = true;
             this.cboObrok.Location = new System.Drawing.Point(380, 87);
             this.cboObrok.Name = "cboObrok";

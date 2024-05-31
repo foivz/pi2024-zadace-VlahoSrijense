@@ -16,7 +16,7 @@ namespace SCVZ_Menza_.Repository
         {
             var narudzbe = new List<Narudzba>();
 
-            string sql = "SELECT * FROM dbo.Narudzba";
+            string sql = $"SELECT n.IdNarudzbe, n.IdObrok, o.NazivObroka, n.Kolicina, n.UkupnaCijena, n.StatusNarudzbe, n.VrijemeNarudzbe FROM dbo.Narudzba n JOIN dbo.Obrok o ON n.IdObrok = o.IdObroka";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -35,7 +35,11 @@ namespace SCVZ_Menza_.Repository
         {
             var narudzbe = new List<Narudzba>();
 
-            string sql = $"SELECT * FROM dbo.Narudzba WHERE IdObrok LIKE '%{pretrazivanje}%'";
+            string sql = $@"
+                SELECT n.IdNarudzbe, n.IdObrok, o.NazivObroka, n.Kolicina, n.UkupnaCijena, n.StatusNarudzbe, n.VrijemeNarudzbe
+                FROM dbo.Narudzba n
+                JOIN dbo.Obrok o ON n.IdObrok = o.IdObroka
+                WHERE o.NazivObroka LIKE '%{pretrazivanje}%'"; ;
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -54,6 +58,7 @@ namespace SCVZ_Menza_.Repository
         {
             int idNarudzbe = int.Parse(reader["IdNarudzbe"].ToString());
             int idObroka = int.Parse(reader["IdObrok"].ToString());
+            string nazivObroka = reader["NazivObroka"].ToString();
             int kolicina = int.Parse(reader["Kolicina"].ToString());
             float cijena = float.Parse(reader["UkupnaCijena"].ToString());
             string statusNarudzbe = reader["StatusNarudzbe"].ToString();
@@ -64,6 +69,7 @@ namespace SCVZ_Menza_.Repository
             {
                 IdNarudzbe = idNarudzbe,
                 IdObroka = idObroka,
+                NazivObroka = nazivObroka,
                 Kolicina = kolicina,
                 UkupnaCijena = cijena,
                 StatusNarudzbe = statusNarudzbe,

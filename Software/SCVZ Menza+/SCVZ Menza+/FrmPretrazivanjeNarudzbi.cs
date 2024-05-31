@@ -27,7 +27,8 @@ namespace SCVZ_Menza_
             var narudzba = NarudzbaRepository.GetNarudzba();
             dgvPregledNarudzbi.DataSource = narudzba;
 
-            dgvPregledNarudzbi.AutoGenerateColumns = true;  
+            dgvPregledNarudzbi.AutoGenerateColumns = true;
+            dgvPregledNarudzbi.Columns["IdObroka"].Visible = false;
         }
 
         private void ShowTrazeneNarudzbe()
