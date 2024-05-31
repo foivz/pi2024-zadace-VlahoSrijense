@@ -199,6 +199,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmNarudzba";
             this.Text = "FrmNarudzba";
+            this.Load += new System.EventHandler(this.FrmNarudzba_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

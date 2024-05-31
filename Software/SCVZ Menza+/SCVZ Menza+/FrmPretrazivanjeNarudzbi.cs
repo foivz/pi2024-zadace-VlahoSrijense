@@ -77,7 +77,7 @@ namespace SCVZ_Menza_
             Narudzba selectedNarudzba = dgvPregledNarudzbi.CurrentRow.DataBoundItem as Narudzba;
             if (selectedNarudzba != null)
             {
-                FrmAzuriranje frmAzuriranje = new FrmAzuriranje();
+                FrmAzuriranje frmAzuriranje = new FrmAzuriranje(selectedNarudzba);
                 Hide();
                 frmAzuriranje.ShowDialog();
                 Close();

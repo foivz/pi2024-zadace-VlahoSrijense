@@ -36,13 +36,14 @@ namespace SCVZ_Menza_
 
         private void btnNaruci_Click(object sender, EventArgs e)
         {
-            int idObroka = idOdabranogObroka;
+            int idNarudzbe = int.Parse(txtBrojNarudžbe.Text);
+            int idObroka = NarudzbaRepository.NadiIdObroka(idOdabranogObroka);
             int kolicina = int.Parse(txtKolicina.Text);
             string ukupnaCijena = txtUkupnaCijena.Text;
             string statusNarudzbe = "U pripremi";
             string vrijemeNarudzbe = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            NarudzbaRepository.InsertNarudzba(idObroka, kolicina, ukupnaCijena, statusNarudzbe, vrijemeNarudzbe);
+            NarudzbaRepository.InsertNarudzba(idNarudzbe, idObroka, kolicina, ukupnaCijena, statusNarudzbe, vrijemeNarudzbe);
 
             FrmPretrazivanjeNarudzbi frmPretrazivanjeNarudzbi = new FrmPretrazivanjeNarudzbi();
             Hide();
@@ -124,11 +125,11 @@ namespace SCVZ_Menza_
         {
 
         }
-
+        string idOdabranogObroka;
         private void cboObrok_SelectedIndexChanged(object sender, EventArgs e)
         {
+            idOdabranogObroka = cboObrok.Text.ToString();
         }
-        int idOdabranogObroka;
         private void LoadObroci()
         {
                 DB.OpenConnection();
@@ -141,8 +142,6 @@ namespace SCVZ_Menza_
                 cboObrok.DisplayMember = "NazivObroka";
                 cboObrok.ValueMember = "IdObroka";
                 cboObrok.DataSource = dt;
-
-            idOdabranogObroka = (int)cboObrok.SelectedValue;
 
             reader.Close();
   
@@ -158,6 +157,10 @@ namespace SCVZ_Menza_
                 txtBrojNarudžbe.Text = nextOrderId.ToString();
             }
 
+        private void FrmNarudzba_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

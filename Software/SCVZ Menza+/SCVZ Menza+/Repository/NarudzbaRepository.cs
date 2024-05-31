@@ -94,9 +94,9 @@ namespace SCVZ_Menza_.Repository
 
             return maxOrderId;
         }
-        public static float NadiCijenu(int id)
+        public static float NadiCijenu(string naziv)
         {
-            string sql = $"SELECT Cijena FROM dbo.Obrok WHERE IdObroka = {id}";
+            string sql = $"SELECT Cijena FROM dbo.Obrok WHERE NazivObroka = '{naziv}'";
             float cijena=0;
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
@@ -111,9 +111,51 @@ namespace SCVZ_Menza_.Repository
             return cijena;
         }
 
-        public static void InsertNarudzba(int idObroka, int kolicina, string ukupnaCijena, string statusNarudzbe, string vrijemeNarudzbe)
+        public static int NadiIdObroka(string naziv)
         {
-            string sql = $"INSERT INTO dbo.Narudzba (IdObrok, Kolicina, UkupnaCijena, StatusNarudzbe, VrijemeNarudzbe) VALUES ('{idObroka}', '{kolicina}', '{ukupnaCijena}', '{statusNarudzbe}', '{vrijemeNarudzbe}')";
+            int id = 0;
+            string sql = $"SELECT IdObroka FROM dbo.Obrok WHERE NazivObroka = '{naziv}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                id = int.Parse(reader["IdObroka"].ToString());
+              
+            }
+            reader.Close();
+
+            DB.CloseConnection();
+
+            return id;
+        }
+
+        public static string NadiNazivObroka(int id)
+        {
+            string nazivObroka ="";
+            string sql = $"SELECT NazivObroka FROM dbo.Obrok WHERE IdObroka = '{id}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                nazivObroka = reader["NazivObroka"].ToString();
+            }
+            reader.Close();
+
+            DB.CloseConnection();
+
+            return nazivObroka;
+        }
+
+        public static void InsertNarudzba(int idNarudzbe, int idObroka, int kolicina, string ukupnaCijena, string statusNarudzbe, string vrijemeNarudzbe)
+        {
+            string sql = $"INSERT INTO dbo.Narudzba (IdNarudzbe, IdObrok, Kolicina, UkupnaCijena, StatusNarudzbe, VrijemeNarudzbe) VALUES ('{idNarudzbe}','{idObroka}', '{kolicina}', '{ukupnaCijena}', '{statusNarudzbe}', '{vrijemeNarudzbe}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+        public static void UpdateNarudzba(int idNarudzbe, int idObroka, int kolicina, string ukupnaCijena, string statusNarudzbe, string vrijemeNarudzbe)
+        {
+            string sql = $"UPDATE dbo.Narudzba SET IdNarudzbe='{idNarudzbe}', IdObrok='{idObroka}', Kolicina='{kolicina}', UkupnaCijena= '{ukupnaCijena}', StatusNarudzbe='{statusNarudzbe}', VrijemeNarudzbe='{vrijemeNarudzbe}' WHERE IdNarudzbe = {idNarudzbe}";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();

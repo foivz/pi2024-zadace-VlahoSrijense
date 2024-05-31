@@ -40,7 +40,7 @@
             // 
             // btnPretrazi
             // 
-            this.btnPretrazi.Location = new System.Drawing.Point(535, 27);
+            this.btnPretrazi.Location = new System.Drawing.Point(812, 40);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(99, 31);
             this.btnPretrazi.TabIndex = 20;
@@ -50,7 +50,7 @@
             // 
             // txtPretrazivanje
             // 
-            this.txtPretrazivanje.Location = new System.Drawing.Point(269, 32);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(546, 45);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(248, 22);
             this.txtPretrazivanje.TabIndex = 19;
@@ -59,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 87);
+            this.label1.Location = new System.Drawing.Point(37, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 18;
@@ -67,7 +67,7 @@
             // 
             // btnBrisanje
             // 
-            this.btnBrisanje.Location = new System.Drawing.Point(396, 465);
+            this.btnBrisanje.Location = new System.Drawing.Point(789, 522);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(121, 56);
             this.btnBrisanje.TabIndex = 17;
@@ -77,7 +77,7 @@
             // 
             // btnAzuriranje
             // 
-            this.btnAzuriranje.Location = new System.Drawing.Point(247, 465);
+            this.btnAzuriranje.Location = new System.Drawing.Point(640, 522);
             this.btnAzuriranje.Name = "btnAzuriranje";
             this.btnAzuriranje.Size = new System.Drawing.Size(121, 56);
             this.btnAzuriranje.TabIndex = 16;
@@ -87,7 +87,7 @@
             // 
             // btnNarucivanje
             // 
-            this.btnNarucivanje.Location = new System.Drawing.Point(99, 465);
+            this.btnNarucivanje.Location = new System.Drawing.Point(492, 522);
             this.btnNarucivanje.Name = "btnNarucivanje";
             this.btnNarucivanje.Size = new System.Drawing.Size(121, 56);
             this.btnNarucivanje.TabIndex = 15;
@@ -98,12 +98,12 @@
             // dgvPregledNarudzbi
             // 
             this.dgvPregledNarudzbi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPregledNarudzbi.Location = new System.Drawing.Point(99, 106);
+            this.dgvPregledNarudzbi.Location = new System.Drawing.Point(40, 105);
             this.dgvPregledNarudzbi.Name = "dgvPregledNarudzbi";
             this.dgvPregledNarudzbi.ReadOnly = true;
             this.dgvPregledNarudzbi.RowHeadersWidth = 51;
             this.dgvPregledNarudzbi.RowTemplate.Height = 24;
-            this.dgvPregledNarudzbi.Size = new System.Drawing.Size(708, 331);
+            this.dgvPregledNarudzbi.Size = new System.Drawing.Size(871, 386);
             this.dgvPregledNarudzbi.TabIndex = 14;
             this.dgvPregledNarudzbi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPregledNarudzbi_CellContentClick);
             // 
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 552);
+            this.ClientSize = new System.Drawing.Size(946, 604);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.label1);
