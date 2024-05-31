@@ -57,6 +57,7 @@ namespace SCVZ_Menza_.Repository
             int kolicina = int.Parse(reader["Kolicina"].ToString());
             float cijena = float.Parse(reader["UkupnaCijena"].ToString());
             string statusNarudzbe = reader["StatusNarudzbe"].ToString();
+            DateTime vrijemeNarudzbe = DateTime.Parse(reader["VrijemeNarudzbe"].ToString());
            
 
             var narudzba = new Narudzba
@@ -66,6 +67,7 @@ namespace SCVZ_Menza_.Repository
                 Kolicina = kolicina,
                 UkupnaCijena = cijena,
                 StatusNarudzbe = statusNarudzbe,
+                VrijemeNarudzbe = vrijemeNarudzbe
                
             };
             return narudzba;

@@ -14,6 +14,7 @@ namespace SCVZ_Menza_.Models
         public float UkupnaCijena {  get; set; }
         public string StatusNarudzbe { get; set; }
        
+        public DateTime VrijemeNarudzbe { get; set; }
 
     }
 }
