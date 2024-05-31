@@ -68,6 +68,7 @@
             // 
             this.txtVrijemeNarudzbe.Location = new System.Drawing.Point(355, 287);
             this.txtVrijemeNarudzbe.Name = "txtVrijemeNarudzbe";
+            this.txtVrijemeNarudzbe.ReadOnly = true;
             this.txtVrijemeNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtVrijemeNarudzbe.TabIndex = 45;
             this.txtVrijemeNarudzbe.TextChanged += new System.EventHandler(this.txtVrijemeNarudzbe_TextChanged);
@@ -76,6 +77,7 @@
             // 
             this.txtStatusNarudzbe.Location = new System.Drawing.Point(355, 240);
             this.txtStatusNarudzbe.Name = "txtStatusNarudzbe";
+            this.txtStatusNarudzbe.ReadOnly = true;
             this.txtStatusNarudzbe.Size = new System.Drawing.Size(171, 22);
             this.txtStatusNarudzbe.TabIndex = 44;
             this.txtStatusNarudzbe.TextChanged += new System.EventHandler(this.txtStatusNarudzbe_TextChanged);
@@ -92,6 +94,7 @@
             // 
             this.txtBrojNarudžbe.Location = new System.Drawing.Point(355, 60);
             this.txtBrojNarudžbe.Name = "txtBrojNarudžbe";
+            this.txtBrojNarudžbe.ReadOnly = true;
             this.txtBrojNarudžbe.Size = new System.Drawing.Size(171, 22);
             this.txtBrojNarudžbe.TabIndex = 41;
             this.txtBrojNarudžbe.TextChanged += new System.EventHandler(this.txtBrojNarudžbe_TextChanged);
@@ -160,6 +163,7 @@
             // 
             this.txtUkupnaCijena.Location = new System.Drawing.Point(355, 199);
             this.txtUkupnaCijena.Name = "txtUkupnaCijena";
+            this.txtUkupnaCijena.ReadOnly = true;
             this.txtUkupnaCijena.Size = new System.Drawing.Size(171, 22);
             this.txtUkupnaCijena.TabIndex = 49;
             this.txtUkupnaCijena.TextChanged += new System.EventHandler(this.txtUkupnaCijena_TextChanged);

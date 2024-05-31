@@ -78,6 +78,45 @@ namespace SCVZ_Menza_.Repository
             };
             return narudzba;
         }
+        public static int GetMaxOrderId()
+        {
+            string sql = $"SELECT IdNarudzbe FROM dbo.Narudzba";
+            int maxOrderId = 0;
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                maxOrderId ++;
+            }
+            reader.Close(); 
+
+            DB.CloseConnection();
+
+            return maxOrderId;
+        }
+        public static float NadiCijenu(int id)
+        {
+            string sql = $"SELECT Cijena FROM dbo.Obrok WHERE IdObroka = {id}";
+            float cijena=0;
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                cijena = float.Parse(reader["Cijena"].ToString()); ;
+            }
+            reader.Close();
+
+            DB.CloseConnection();
+
+            return cijena;
+        }
+
+        public static void InsertNarudzba(int idObroka, int kolicina, string ukupnaCijena, string statusNarudzbe, string vrijemeNarudzbe)
+        {
+            string sql = $"INSERT INTO dbo.Narudzba (IdObrok, Kolicina, UkupnaCijena, StatusNarudzbe, VrijemeNarudzbe) VALUES ('{idObroka}', '{kolicina}', '{ukupnaCijena}', '{statusNarudzbe}', '{vrijemeNarudzbe}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }
-
