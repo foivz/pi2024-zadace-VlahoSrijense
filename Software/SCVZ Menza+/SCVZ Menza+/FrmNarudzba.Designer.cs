@@ -33,7 +33,6 @@
             this.txtVrijemeNarudzbe = new System.Windows.Forms.TextBox();
             this.txtStatusNarudzbe = new System.Windows.Forms.TextBox();
             this.txtKolicina = new System.Windows.Forms.TextBox();
-            this.txtObrok = new System.Windows.Forms.TextBox();
             this.txtBrojNarudžbe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUkupnaCijena = new System.Windows.Forms.TextBox();
+            this.cboObrok = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -87,14 +87,6 @@
             this.txtKolicina.Size = new System.Drawing.Size(171, 22);
             this.txtKolicina.TabIndex = 43;
             this.txtKolicina.TextChanged += new System.EventHandler(this.txtKolicina_TextChanged);
-            // 
-            // txtObrok
-            // 
-            this.txtObrok.Location = new System.Drawing.Point(355, 105);
-            this.txtObrok.Name = "txtObrok";
-            this.txtObrok.Size = new System.Drawing.Size(171, 22);
-            this.txtObrok.TabIndex = 42;
-            this.txtObrok.TextChanged += new System.EventHandler(this.txtObrok_TextChanged);
             // 
             // txtBrojNarudžbe
             // 
@@ -172,11 +164,21 @@
             this.txtUkupnaCijena.TabIndex = 49;
             this.txtUkupnaCijena.TextChanged += new System.EventHandler(this.txtUkupnaCijena_TextChanged);
             // 
+            // cboObrok
+            // 
+            this.cboObrok.FormattingEnabled = true;
+            this.cboObrok.Location = new System.Drawing.Point(356, 104);
+            this.cboObrok.Name = "cboObrok";
+            this.cboObrok.Size = new System.Drawing.Size(169, 24);
+            this.cboObrok.TabIndex = 50;
+            this.cboObrok.SelectedIndexChanged += new System.EventHandler(this.cboObrok_SelectedIndexChanged);
+            // 
             // FrmNarudzba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cboObrok);
             this.Controls.Add(this.txtUkupnaCijena);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnOdustani);
@@ -184,7 +186,6 @@
             this.Controls.Add(this.txtVrijemeNarudzbe);
             this.Controls.Add(this.txtStatusNarudzbe);
             this.Controls.Add(this.txtKolicina);
-            this.Controls.Add(this.txtObrok);
             this.Controls.Add(this.txtBrojNarudžbe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -205,7 +206,6 @@
         private System.Windows.Forms.TextBox txtVrijemeNarudzbe;
         private System.Windows.Forms.TextBox txtStatusNarudzbe;
         private System.Windows.Forms.TextBox txtKolicina;
-        private System.Windows.Forms.TextBox txtObrok;
         private System.Windows.Forms.TextBox txtBrojNarudžbe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -214,5 +214,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUkupnaCijena;
+        private System.Windows.Forms.ComboBox cboObrok;
     }
 }

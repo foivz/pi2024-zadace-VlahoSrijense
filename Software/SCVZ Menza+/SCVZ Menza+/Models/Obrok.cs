@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SCVZ_Menza_.Models
 {
@@ -17,5 +18,10 @@ namespace SCVZ_Menza_.Models
         public int Zaliha { get;set;}
 
         public float Cijena {  get;set;}
+
+        public override string ToString()
+        {
+            return NazivObroka;
+        }
     }
 }

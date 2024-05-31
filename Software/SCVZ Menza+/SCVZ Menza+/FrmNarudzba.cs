@@ -42,11 +42,6 @@ namespace SCVZ_Menza_
 
         }
 
-        private void txtObrok_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtBrojNarudžbe_TextChanged(object sender, EventArgs e)
         {
 
@@ -83,6 +78,11 @@ namespace SCVZ_Menza_
         }
 
         private void txtUkupnaCijena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboObrok_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

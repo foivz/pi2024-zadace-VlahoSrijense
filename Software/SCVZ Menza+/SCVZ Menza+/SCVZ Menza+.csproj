@@ -73,6 +73,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\NarudzbaRepository.cs" />
+    <Compile Include="Repository\ObrokRepository.cs" />
     <EmbeddedResource Include="FrmAzuriranje.resx">
       <DependentUpon>FrmAzuriranje.cs</DependentUpon>
     </EmbeddedResource>
