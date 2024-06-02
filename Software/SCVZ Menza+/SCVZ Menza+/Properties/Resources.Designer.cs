@@ -59,5 +59,25 @@ namespace SCVZ_Menza_.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dizajn_bez_naslova {
+            get {
+                object obj = ResourceManager.GetObject("Dizajn bez naslova", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dizajn_bez_naslova_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Dizajn_bez_naslova-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

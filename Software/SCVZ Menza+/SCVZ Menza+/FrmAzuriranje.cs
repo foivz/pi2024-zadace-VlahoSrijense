@@ -89,6 +89,7 @@ namespace SCVZ_Menza_
             }
 
 
+
             float cijenaObroka = NarudzbaRepository.NadiCijenu(idOdabranogObroka);
 
             float ukupnaCijena = kolicina * cijenaObroka;
