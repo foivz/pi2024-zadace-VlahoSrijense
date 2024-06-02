@@ -72,9 +72,10 @@ namespace SCVZ_Menza_
                 MessageBox.Show("Unesite valjanu količinu.");
                 return;
             }
-            if (cboObrok.SelectedItem == null)
+
+            if (NarudzbaRepository.NadiZalihu(idOdabranogObroka))
             {
-                MessageBox.Show("Odaberite obrok.");
+                MessageBox.Show("Tog jela nema na stanju. Izaberite drugo jelo");
                 return;
             }
 

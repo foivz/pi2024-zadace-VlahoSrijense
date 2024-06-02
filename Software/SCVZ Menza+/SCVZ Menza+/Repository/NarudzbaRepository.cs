@@ -111,6 +111,24 @@ namespace SCVZ_Menza_.Repository
             return cijena;
         }
 
+        public static bool NadiZalihu(string naziv)
+        {
+            string sql = $"SELECT Zaliha FROM dbo.Obrok WHERE NazivObroka = '{naziv}'";
+            int zaliha = 0;
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                zaliha = int.Parse(reader["Zaliha"].ToString()); ;
+            }
+            reader.Close();
+
+            DB.CloseConnection();
+
+            if(zaliha==0) return true;
+            else return false;
+        }
+
         public static int NadiIdObroka(string naziv)
         {
             int id = 0;
